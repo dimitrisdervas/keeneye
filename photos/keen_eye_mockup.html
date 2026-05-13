@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #0e0e0e;
+    --white: #f5f2ec;
+    --accent: #c8a84b;
+    --accent-dark: #8a7030;
+    --mid: #2a2a2a;
+    --muted: #888;
+    --serif: 'Bebas Neue', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+  body {
+    font-family: var(--body);
+    background: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    background: rgba(14,14,14,0.96);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: var(--white);
+  }
+  .logo span { color: var(--accent); }
+  nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  nav ul li a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent) !important;
+    color: var(--black) !important;
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-weight: 500 !important;
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 88vh;
+    border-bottom: 1px solid #222;
+  }
+  .hero-left {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #222;
+  }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(64px, 8vw, 110px);
+    line-height: 0.92;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    color: var(--white);
+  }
+  .hero-title em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .hero-subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 380px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .hero-btns { display: flex; gap: 16px; align-items: center; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--black);
+    padding: 14px 32px;
+    border: none;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #e0be6a; }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid #444;
+    color: var(--white);
+    padding: 14px 32px;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: var(--mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 460px;
+  }
+  .hero-img-placeholder .img-icon {
+    width: 64px; height: 64px;
+    border: 2px dashed #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img-placeholder .img-icon svg { opacity: 0.4; }
+  .hero-img-placeholder p { color: #555; font-size: 13px; letter-spacing: 1px; }
+  .hero-badge {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    background: rgba(14,14,14,0.9);
+    border: 1px solid #333;
+    padding: 16px 20px;
+    border-radius: 4px;
+  }
+  .hero-badge .badge-num {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .hero-badge .badge-txt { font-size: 12px; color: var(--muted); letter-spacing: 1px; }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    background: var(--accent);
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-block;
+    animation: marquee 22s linear infinite;
+  }
+  .marquee-inner span {
+    font-family: var(--serif);
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: var(--black);
+    padding: 0 40px;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SERVICES */
+  .section { padding: 100px 60px; }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5vw, 64px);
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    line-height: 1;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #222;
+    border: 1px solid #222;
+  }
+  .service-card {
+    background: var(--black);
+    padding: 48px 40px;
+    transition: background 0.25s;
+    cursor: default;
+  }
+  .service-card:hover { background: #141414; }
+  .service-num {
+    font-family: var(--serif);
+    font-size: 52px;
+    color: #2a2a2a;
+    line-height: 1;
+    margin-bottom: 24px;
+    transition: color 0.25s;
+  }
+  .service-card:hover .service-num { color: var(--accent-dark); }
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .service-icon svg { opacity: 0.7; }
+  .service-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .service-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* WORK / GALLERY */
+  .gallery-section {
+    padding: 100px 60px;
+    background: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 8px;
+  }
+  .gallery-item {
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .gallery-item:hover .gallery-inner { background: #222; }
+  .gallery-inner svg { opacity: 0.25; }
+  .gallery-inner p { color: #444; font-size: 12px; letter-spacing: 1px; }
+  .gallery-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(14,14,14,0.85);
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #888;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ABOUT STRIP */
+  .about-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #222;
+  }
+  .about-left {
+    padding: 100px 60px;
+    border-right: 1px solid #222;
+  }
+  .about-right {
+    padding: 100px 60px;
+    background: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+  .stat-row { border-bottom: 1px solid #1e1e1e; padding-bottom: 32px; }
+  .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 56px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-txt { font-size: 13px; color: var(--muted); letter-spacing: 1px; margin-top: 4px; }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 100px 60px;
+    background: var(--accent);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .contact-section .section-label { color: var(--black); opacity: 0.5; }
+  .contact-section .section-title { color: var(--black); margin-bottom: 24px; }
+  .contact-section p { color: rgba(0,0,0,0.6); font-size: 15px; font-weight: 300; line-height: 1.8; }
+  .contact-details { display: flex; flex-direction: column; gap: 20px; }
+  .contact-row { display: flex; gap: 16px; align-items: flex-start; }
+  .contact-row-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.45);
+    min-width: 80px;
+    padding-top: 2px;
+    font-weight: 400;
+  }
+  .contact-row-val { font-size: 15px; color: var(--black); font-weight: 500; }
+  .contact-btn {
+    margin-top: 16px;
+    background: var(--black);
+    color: var(--accent);
+    padding: 14px 32px;
+    border: none;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #070707;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1a1a1a;
+  }
+  footer .logo { font-size: 22px; }
+  footer p { font-size: 12px; color: #444; letter-spacing: 1px; }
+  .social-links { display: flex; gap: 20px; }
+  .social-links a { font-size: 12px; color: #555; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .social-links a:hover { color: var(--accent); }
+
+  .anno {
+    display: inline-block;
+    background: rgba(200,168,75,0.15);
+    border: 1px dashed var(--accent-dark);
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 8px;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">KEEN<span>EYE</span></div>
+  <ul>
+    <li><a href="#">Αρχική</a></li>
+    <li><a href="#">Υπηρεσίες</a></li>
+    <li><a href="#">Έργα μας</a></li>
+    <li><a href="#">Εταιρεία</a></li>
+    <li><a href="#" class="nav-cta">Επικοινωνία</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Διαφημιστική · Εκτυπώσεις · Από το 1995</p>
+    <h1 class="hero-title">YOUR<br>BRAND<br><em>PRINTS</em></h1>
+    <p class="hero-subtitle">Ολοκληρωμένη διαφημιστική φροντίδα — από το λογότυπο ως την επιγραφή σας. Θεσσαλονίκη & Αριδαία.</p>
+    <div class="hero-btns">
+      <button class="btn-primary">Δείτε τις υπηρεσίες</button>
+      <button class="btn-ghost">Τα έργα μας</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-placeholder">
+      <div class="img-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </div>
+      <p>Photo Placeholder <span class="anno">client photo</span></p>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-num">30+</div>
+      <div class="badge-txt">Χρόνια εμπειρίας</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>ΕΠΙΓΡΑΦΕΣ</span><span>·</span>
+    <span>ΣΗΜΑΙΕΣ</span><span>·</span>
+    <span>ΑΥΤΟΚΟΛΛΗΤΑ</span><span>·</span>
+    <span>ΕΚΤΥΠΩΣΕΙΣ</span><span>·</span>
+    <span>ΛΟΓΟΤΥΠΑ</span><span>·</span>
+    <span>ΦΩΤΕΙΝΕΣ ΕΠΙΓΡΑΦΕΣ</span><span>·</span>
+    <span>DIGITAL PRINTING</span><span>·</span>
+    <span>ΕΠΙΓΡΑΦΕΣ</span><span>·</span>
+    <span>ΣΗΜΑΙΕΣ</span><span>·</span>
+    <span>ΑΥΤΟΚΟΛΛΗΤΑ</span><span>·</span>
+    <span>ΕΚΤΥΠΩΣΕΙΣ</span><span>·</span>
+    <span>ΛΟΓΟΤΥΠΑ</span><span>·</span>
+    <span>ΦΩΤΕΙΝΕΣ ΕΠΙΓΡΑΦΕΣ</span><span>·</span>
+    <span>DIGITAL PRINTING</span><span>·</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <p class="section-label">Τι κάνουμε</p>
+  <h2 class="section-title">Υπηρεσίες</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      </div>
+      <h3 class="service-name">Επιγραφές</h3>
+      <p class="service-desc">Φωτεινές και μη επιγραφές για επαγγελματικούς χώρους, βιτρίνες και εξωτερικούς χώρους.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      </div>
+      <h3 class="service-name">Εκτυπώσεις</h3>
+      <p class="service-desc">Ψηφιακές εκτυπώσεις μεγάλου φορμά σε κάθε υλικό — canvas, flex, αυτοκόλλητο, banner.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      </div>
+      <h3 class="service-name">Branding</h3>
+      <p class="service-desc">Σχεδιασμός λογοτύπου και εταιρικής ταυτότητας που αφήνει εντύπωση.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      </div>
+      <h3 class="service-name">Σημαίες & Banners</h3>
+      <p class="service-desc">Υψηλής αντοχής σημαίες, roll-up banners και δίκτυα για κάθε εκδήλωση ή χώρο.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <h3 class="service-name">Αυτοκόλλητα</h3>
+      <p class="service-desc">Αυτοκόλλητα οχημάτων, βιτρινών και χώρων σε κάθε μέγεθος και υλικό.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3 class="service-name">Προωθητικά Υλικά</h3>
+      <p class="service-desc">Επαγγελματικές κάρτες, φυλλάδια, αφίσες και κάθε είδους έντυπο προωθητικό υλικό.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY / WORK -->
+<section class="gallery-section">
+  <div class="gallery-header">
+    <div>
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Τα Έργα μας</h2>
+    </div>
+    <button class="btn-ghost" style="margin-bottom: 8px;">Δείτε όλα →</button>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall">
+      <div class="gallery-inner">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p>Client photo <span class="anno">featured work</span></p>
+      </div>
+      <div class="gallery-label">Επιγραφή</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p>Photo <span class="anno">work</span></p>
+      </div>
+      <div class="gallery-label">Branding</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p>Photo <span class="anno">work</span></p>
+      </div>
+      <div class="gallery-label">Αυτοκόλλητα</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p>Photo <span class="anno">work</span></p>
+      </div>
+      <div class="gallery-label">Banner</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <p>Photo <span class="anno">work</span></p>
+      </div>
+      <div class="gallery-label">Εκτύπωση</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="about-left">
+    <p class="section-label">Η εταιρεία μας</p>
+    <h2 class="section-title">Από το 1995 στην Ελληνική Αγορά</h2>
+    <p style="color:var(--muted); font-size:15px; line-height:1.9; font-weight:300; max-width:440px;">
+      Η Keen Eye Adv ξεκίνησε στην Αριδαία Πέλλας και σήμερα δραστηριοποιείται με βάση τη Θεσσαλονίκη. Με εμπειρία σε πλήθος εφαρμογών και συνεχή εμπιστοσύνη των πελατών της, προσφέρει ολοκληρωμένη διαφημιστική φροντίδα κάθε κλίμακας.
+    </p>
+  </div>
+  <div class="about-right">
+    <div class="stat-row">
+      <div class="stat-num">30+</div>
+      <div class="stat-txt">Χρόνια στην αγορά</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num">2</div>
+      <div class="stat-txt">Εγκαταστάσεις — Θεσσαλονίκη & Αριδαία</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num">∞</div>
+      <div class="stat-txt">Ικανοποιημένοι πελάτες</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div>
+    <p class="section-label">Επικοινωνία</p>
+    <h2 class="section-title">Ας μιλήσουμε για το project σας</h2>
+    <p>Στείλτε μας τις φωτογραφίες ή ιδέες σας και θα σας δώσουμε λύση σύντομα και αποτελεσματικά.</p>
+  </div>
+  <div class="contact-details">
+    <div class="contact-row">
+      <span class="contact-row-label">Θεσσαλονίκη</span>
+      <div>
+        <div class="contact-row-val">Γαμβέτα 147, Τ.Κ. 54248</div>
+        <div style="font-size:14px; color:rgba(0,0,0,0.5); margin-top:2px;">2315 318 397</div>
+      </div>
+    </div>
+    <div class="contact-row">
+      <span class="contact-row-label">Αριδαία</span>
+      <div>
+        <div class="contact-row-val">Τσάκοι, Τ.Κ. 58400</div>
+        <div style="font-size:14px; color:rgba(0,0,0,0.5); margin-top:2px;">2384 021 972 · 6932 002 129</div>
+      </div>
+    </div>
+    <div class="contact-row">
+      <span class="contact-row-label">Email</span>
+      <div class="contact-row-val">info@keeneye1.gr</div>
+    </div>
+    <button class="contact-btn">Στείλτε μήνυμα →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">KEEN<span style="color:var(--accent)">EYE</span></div>
+  <p>© 2025 Keen Eye Adv. Όλα τα δικαιώματα διατηρούνται.</p>
+  <div class="social-links">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>

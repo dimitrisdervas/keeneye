@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Προϊόντα | Keen Eye Advertising</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #0e0e0e;
+    --white: #f5f2ec;
+    --accent: #c8a84b;
+    --serif: 'Oswald', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+  body {
+    font-family: var(--body);
+    background: var(--black);
+    color: var(--white);
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+  }
+  .back-btn {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .gallery-item {
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 180px;
+    border: 1px solid #222;
+  }
+  .gallery-inner {
+    width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  }
+  .gallery-label {
+    position: absolute; bottom: 8px; left: 8px; background: rgba(14,14,14,0.85); font-size: 9px; letter-spacing: 1px; color: #888; padding: 2px 6px; border-radius: 2px; text-transform: uppercase;
+  }
+  .footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="back-btn">← ΕΠΙΣΤΡΟΦΗ</a>
+    <img src="./new_logo.png" alt="Keen Eye" style="height:32px; width:auto; filter:brightness(0) invert(1);">
+  </header>
+
+  <h1 class="section-title">Προϊόντα</h1>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" aria-label="Branding Design Portfolio">
+      <div class="gallery-inner" style="background: url('./branding.png') center/cover;"></div>
+      <div class="gallery-label">Branding Design</div>
+    </div>
+    <div class="gallery-item" aria-label="Επιγραφές - Σήμανση">
+      <div class="gallery-inner" style="background: url('./photos/keeneye photos/Επιγραφές/IMG_4474.JPG') center/cover;"></div>
+      <div class="gallery-label">Επιγραφές</div>
+    </div>
+    <div class="gallery-item" aria-label="Αυτοκόλλητα παντός είδους">
+      <div class="gallery-inner" style="background: url('./photos/keeneye photos/Αυτοκόλλητα/Αυτοκόλλητα 4.jpg') center/cover;"></div>
+      <div class="gallery-label">Αυτοκόλλητα</div>
+    </div>
+    <div class="gallery-item" aria-label="Banner και διαφημιστικά πανό">
+      <div class="gallery-inner" style="background: url('./photos/keeneye photos/Αυτοκόλλητα/IMG_4506.JPG') center/cover;"></div>
+      <div class="gallery-label">Banner</div>
+    </div>
+    <div class="gallery-item" aria-label='"Ντύσιμο" επαγγελματικών οχημάτων'>
+      <div class="gallery-inner" style="background: url('./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 5.JPG') center/cover;"></div>
+      <div class="gallery-label">"Ντύσιμο" Οχημάτων</div>
+    </div>
+    <div class="gallery-item" aria-label="Διαφημιστικά δώρα και είδη προβολής">
+      <div class="gallery-inner" style="background: url('./photos/keeneye images/IMG_1320.jpg') center/cover;"></div>
+      <div class="gallery-label">Διαφημιστικά Δώρα</div>
+    </div>
+    <div class="gallery-item" aria-label="Ρούχα εργασίας και προώθησης">
+      <div class="gallery-inner" style="background: url('./photos/keeneye images/IMG_4248.jpg') center/cover;"></div>
+      <div class="gallery-label">Ρούχα Εργασίας</div>
+    </div>
+    <div class="gallery-item" aria-label="Ψηφιακές εκτυπώσεις μεγάλου φορμά">
+      <div class="gallery-inner" style="background: url('./photos/keeneye photos/Επιγραφές/IMG_4250.jpg') center/cover;"></div>
+      <div class="gallery-label">Ψηφιακή Εκτύπωση</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2026 Keen Eye Adv.
+  </footer>
+
+</body>
+</html>

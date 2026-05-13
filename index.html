@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="el" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keen Eye Advertising | Επιγραφές, Ψηφιακές Εκτυπώσεις & Branding στη Θεσσαλονίκη</title>
+  <meta name="description" content="Η Keen Eye Advertising προσφέρει ολοκληρωμένες διαφημιστικές λύσεις από το 1995 στη Θεσσαλονίκη. Επιγραφές, ψηφιακές εκτυπώσεις, εταιρική ταυτότητα και branding.">
+  <meta name="keywords" content="διαφήμιση, επιγραφές, ψηφιακές εκτυπώσεις, branding, Θεσσαλονίκη, Keen Eye Advertising">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://keeneye.gr/">
+  <meta property="og:title" content="Keen Eye Advertising | Επιγραφές & Branding">
+  <meta property="og:description" content="Ολοκληρωμένες διαφημιστικές λύσεις και ψηφιακές εκτυπώσεις στη Θεσσαλονίκη από το 1995.">
+  <meta property="og:image" content="https://keeneye.gr/photos/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://keeneye.gr/">
+  <meta property="twitter:title" content="Keen Eye Advertising | Επιγραφές & Branding">
+  <meta property="twitter:description" content="Ολοκληρωμένες διαφημιστικές λύσεις και ψηφιακές εκτυπώσεις στη Θεσσαλονίκη από το 1995.">
+  <meta property="twitter:image" content="https://keeneye.gr/photos/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="./photos/hero-bg.jpg" fetchpriority="high">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Keen Eye Advertising",
+      "image": "https://keeneye.gr/photos/hero-bg.jpg",
+      "@id": "https://keeneye.gr",
+      "url": "https://keeneye.gr",
+      "telephone": "+302315318397",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Γαμβέτα 147",
+        "addressLocality": "Θεσσαλονίκη",
+        "postalCode": "54248",
+        "addressCountry": "GR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.6083,
+        "longitude": 22.9567
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    :root {
+      --bg: #F7F3ED;
+      --ink: #171310;
+      --mid: #4A423C;
+      --rule: #D8D0C4;
+      --acc: #C4622D;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'Manrope', sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased
+    }
+
+    /* NAV */
+    nav {
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(247, 243, 237, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100
+    }
+
+    @media(min-width:768px) {
+      nav {
+        padding: 16px 80px
+      }
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 48px
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      align-items: center
+    }
+
+    @media(min-width:768px) {
+      .nav-links {
+        display: flex
+      }
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .15s
+    }
+
+    .nav-links a:hover {
+      color: var(--ink)
+    }
+
+    .nav-contact-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.2s
+    }
+
+    @media(min-width:768px) {
+      .nav-contact-btn {
+        display: inline-flex
+      }
+    }
+
+    .nav-contact-btn:hover {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .mob-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer
+    }
+
+    .mob-btn span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: all .2s
+    }
+
+    @media(min-width:768px) {
+      .mob-btn {
+        display: none
+      }
+    }
+
+    .mob-nav {
+      display: none;
+      padding: 24px 40px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg)
+    }
+
+    .mob-nav.open {
+      display: block
+    }
+
+    .mob-nav a {
+      display: block;
+      padding: 12px 0;
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule)
+    }
+
+    .mob-nav a:last-child {
+      border: none
+    }
+
+    .mob-nav a:hover {
+      color: var(--ink)
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      overflow: hidden;
+      background: url('./photos/hero-bg.jpg') no-repeat center calc(50% + 40px);
+      background-size: cover;
+      min-height: calc(100dvh - 80px);
+      align-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(247, 243, 237, 0.85);
+      /* Matches var(--bg) */
+      z-index: 1;
+    }
+
+    .hero>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    @media(min-width:768px) {
+      .hero {
+        padding: 80px;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        min-height: calc(100vh - 88px);
+        align-content: center;
+      }
+    }
+
+    .h-left {
+      padding-right: 0;
+      position: relative;
+    }
+
+    @media(min-width:768px) {
+      .h-left {
+        padding-right: 80px;
+      }
+    }
+
+    .h-tag {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--acc);
+      margin-bottom: 32px
+    }
+
+    @media(min-width:768px) {
+      .h-tag {
+        margin-bottom: 40px
+      }
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.02em
+    }
+
+    h1 em {
+      font-style: italic;
+      display: block;
+      color: var(--mid)
+    }
+
+    .h-body {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--mid);
+      max-width: 380px;
+      margin-top: 28px;
+      font-weight: 300
+    }
+
+    .h-actions {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px
+    }
+
+    .h-btn {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color .2s, border-color .2s
+    }
+
+    .h-btn:hover {
+      color: var(--acc);
+      border-color: var(--acc)
+    }
+
+    .h-ig {
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .h-ig:hover {
+      color: var(--acc)
+    }
+
+    .h-right {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    @media(min-width:768px) {
+      .h-right {
+        padding-left: 80px
+      }
+    }
+
+    .h-stat {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    }
+
+    @media(min-width:768px) {
+      .h-stat {
+        padding: 36px 0
+      }
+    }
+
+    .h-stat:first-child {
+      padding-top: 0
+    }
+
+    .h-num {
+      font-family: var(--serif);
+      font-size: clamp(56px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--ink)
+    }
+
+    .h-num sup {
+      font-size: 50%;
+      color: var(--acc);
+      vertical-align: super
+    }
+
+    .h-lbl {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 10px
+    }
+
+    .h-loc {
+      padding-top: 32px;
+      font-size: 13px;
+      color: var(--mid);
+      font-weight: 300;
+      line-height: 1.8
+    }
+
+    .h-loc strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 6px
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: var(--rule);
+      margin: 0 40px
+    }
+
+    @media(min-width:768px) {
+      .divider {
+        margin: 0 80px
+      }
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 80px 40px
+    }
+
+    @media(min-width:768px) {
+      .products {
+        padding: 100px 80px
+      }
+    }
+
+    .sec-label {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--acc);
+      margin-bottom: 16px
+    }
+
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 400;
+      letter-spacing: -.01em;
+      margin-bottom: 48px
+    }
+
+    .prod-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px
+    }
+
+    @media(min-width:640px) {
+      .prod-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(min-width:1024px) {
+      .prod-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .prod-tile {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      padding: 0;
+    }
+
+    .prod-tile:hover {
+      transform: translateY(-4px)
+    }
+
+    .prod-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .prod-tile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease
+    }
+
+    .prod-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(23, 19, 16, 0.6);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .prod-overlay span {
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transform: translateY(10px);
+      transition: transform 0.4s ease
+    }
+
+    .prod-tile:hover .prod-tile-img {
+      transform: scale(1.05)
+    }
+
+    .prod-tile:hover .prod-overlay {
+      opacity: 1
+    }
+
+    .prod-tile:hover .prod-overlay span {
+      transform: translateY(0)
+    }
+
+    .prod-tile>span {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-align: center;
+      font-weight: 500;
+      display: block;
+      width: 100%;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      padding: 80px 40px
+    }
+
+    @media(min-width:768px) {
+      .portfolio {
+        padding: 100px 80px
+      }
+    }
+
+    .port-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px
+    }
+
+    .p-filt {
+      background: none;
+      border: none;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.2s
+    }
+
+    .p-filt:hover {
+      color: var(--ink)
+    }
+
+    .p-filt.active {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .port-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px
+    }
+
+    @media(min-width:640px) {
+      .port-grid {
+        grid-template-columns: repeat(4, 1fr)
+      }
+    }
+
+    @media(min-width:1024px) {
+      .port-grid {
+        grid-template-columns: repeat(6, 1fr)
+      }
+    }
+
+    .port-item {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 4px;
+      cursor: zoom-in;
+      display: none
+    }
+
+    .port-item.visible {
+      display: block
+    }
+
+    .port-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease
+    }
+
+    .port-item:hover img {
+      transform: scale(1.02)
+    }
+
+    .port-overlay {
+      position: absolute;
+      inset: 4px;
+      background: rgba(23, 19, 16, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .port-overlay span {
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .port-item:hover .port-overlay {
+      opacity: 1;
+    }
+
+    .port-load {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center
+    }
+
+    .port-load button {
+      background: transparent;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: all 0.2s
+    }
+
+    .port-load button:hover {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 19, 16, 0.95);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain
+    }
+
+    .lb-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 1
+    }
+
+    /* SERVICES (desktop only) */
+    .services {
+      display: none;
+      padding: 80px 40px
+    }
+
+    @media(min-width:768px) {
+      .services {
+        display: block;
+        padding: 100px 80px
+      }
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px
+    }
+
+    @media(min-width:1024px) {
+      .svc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+        row-gap: 56px
+      }
+    }
+
+    .svc-card {
+      background: transparent;
+      padding: 0;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start
+    }
+
+    .svc-n {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--acc);
+      font-style: italic;
+      line-height: 1;
+      margin-top: 2px
+    }
+
+    .svc-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .svc-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink)
+    }
+
+    .svc-desc {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media(min-width:768px) {
+      .about {
+        padding: 0 80px;
+      }
+    }
+
+
+
+    .about-text h2 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -.01em;
+      margin-bottom: 16px;
+      color: var(--ink)
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.9;
+      font-weight: 300;
+      margin-bottom: 0
+    }
+
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      align-items: center;
+    }
+
+    @media(min-width:768px) {
+      .about-grid {
+        grid-template-columns: 1.8fr 1fr;
+        gap: 80px;
+        align-items: stretch;
+      }
+    }
+
+    .about-text {
+      text-align: left;
+      padding: 80px 0;
+    }
+
+    @media(min-width:768px) {
+      .about-text {
+        padding: 100px 0;
+      }
+    }
+
+    .about-stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-stats .h-right {
+      padding-left: 0;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      padding-left: 40px
+    }
+
+    /* NAV REDESIGN */
+    nav {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      background: rgba(247, 243, 237, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100
+    }
+
+    @media(min-width:768px) {
+      nav {
+        padding: 20px 80px
+      }
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 48px
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      align-items: center
+    }
+
+    @media(min-width:768px) {
+      .nav-links {
+        display: flex
+      }
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .15s
+    }
+
+    .nav-links a:hover {
+      color: var(--ink)
+    }
+
+    .nav-contact-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.2s
+    }
+
+    @media(min-width:768px) {
+      .nav-contact-btn {
+        display: inline-flex
+      }
+    }
+
+    .nav-contact-btn:hover {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 100px 40px;
+      background: var(--ink);
+      color: #F7F3ED;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    @media(min-width:768px) {
+      .contact {
+        padding: 100px 80px;
+      }
+    }
+
+    .contact h2 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 55px;
+    }
+
+    .contact h2 em {
+      font-style: italic;
+    }
+
+    .c-main-btn {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #F7F3ED;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      text-decoration: none;
+      transition: all .3s;
+      border-radius: 40px;
+      margin-bottom: 55px;
+    }
+
+    .c-main-btn:hover {
+      border-color: var(--acc);
+      color: var(--acc);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .c-info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      max-width: 800px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 55px;
+    }
+
+    @media(min-width:640px) {
+      .c-info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .c-email-item {
+        grid-column: span 2;
+        text-align: center;
+        margin-top: -10px;
+      }
+    }
+
+    .c-label {
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 16px;
+    }
+
+    .c-val {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: #F7F3ED;
+      margin-bottom: 8px;
+    }
+
+    .c-val a {
+      color: #F7F3ED;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .c-val a:hover {
+      color: var(--acc);
+    }
+
+    .c-sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 16px;
+      font-weight: 300;
+      line-height: 1.6
+    }
+
+    /* FOOTER */
+    .c-copy-minimal {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      font-size: 10px;
+      color: rgba(247, 243, 237, 0.3);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    @media(min-width:768px) {
+      .c-copy-minimal {
+        bottom: 48px;
+        left: 80px;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-left">
+      <a href="#" title="Keen Eye Advertising - Home"><img src="./new_logo.png" alt="Keen Eye Advertising - Logo" width="180" height="56" style="height:56px;width:auto"></a>
+      <div class="nav-links">
+        <a href="#hero">Αρχική</a>
+        <a href="#portfolio">Έργα</a>
+        <a href="#services">Υπηρεσίες</a>
+      </div>
+    </div>
+    <a href="#contact" class="nav-contact-btn">Επικοινωνία</a>
+    <button class="mob-btn" id="mob-menu" aria-label="Toggle mobile menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mob-nav" id="mob-nav">
+    <a href="#hero">Αρχική</a>
+    <a href="#portfolio">Έργα</a>
+    <a href="#services">Υπηρεσίες</a>
+    <a href="#contact">Επικοινωνία</a>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="h-left">
+      <div class="h-tag">Αισθητική & Διαφήμιση, 1995</div>
+      <h1>Κορυφαία<br>Διαφημιστική<br><em>Προβολή.</em></h1>
+      <p class="h-body">Ολοκληρωμένη διαφημιστική φροντίδα και ψηφιακές εκτυπώσεις από το 1995. Εξειδικευμένες λύσεις σε
+        επιγραφές, branding και "ντύσιμο" επαγγελματικών χώρων.</p>
+      <div class="h-actions">
+        <a href="#portfolio" class="h-btn">Δείτε τα έργα μας</a>
+        <a href="https://www.instagram.com/keeneye_adv/" target="_blank" class="h-ig">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="sec-label">Ποιοι είμαστε</div>
+        <h2>Τριάντα χρόνια παρουσίας στην αγορά.</h2>
+        <p>Ξεκινήσαμε από την Αριδαία το 1995 με μια απλή πεποίθηση: η εικόνα μιας επιχείρησης αξίζει τον ίδιο σεβασμό
+          με το προϊόν της. Σήμερα, από τη Θεσσαλονίκη, συνεχίζουμε να αναλαμβάνουμε κάθε έργο με την ίδια προσοχή — από
+          μία απλή επιγραφή ως την πλήρη εικαστική ταυτότητα χώρου.</p>
+      </div>
+      <div class="about-stats">
+        <div class="h-right">
+          <div class="h-stat">
+            <div class="h-num">30<sup>+</sup></div>
+            <div class="h-lbl">Χρόνια εμπειρίας</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-num">2</div>
+            <div class="h-lbl">Εγκαταστάσεις</div>
+          </div>
+          <div class="h-loc">
+            <strong>Αριδαία & Θεσσαλονίκη</strong>
+            Βορεία Ελλάδα
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="sec-label">Δουλειές Μας</div>
+    <div class="sec-title">Πρόσφατα Έργα</div>
+    <div class="port-filters">
+      <button class="p-filt active" data-filter="all">Όλα</button>
+      <button class="p-filt" data-filter="Επιγραφές">Επιγραφές</button>
+      <button class="p-filt" data-filter="Αυτοκόλλητα">Αυτοκόλλητα & Banner</button>
+      <button class="p-filt" data-filter="Ντύσιμο">Ντύσιμο Οχημάτων</button>
+    </div>
+    <div class="port-grid" id="port-grid">
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4484.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 4.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/./banner.jpg" alt="Επαγγελματικό διαφημιστικό banner">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4486.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/Αυτοκόλλητα.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4503.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 7.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4481.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/IMG_4489.JPG" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 6.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4500.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/IMG_4416.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/Επιγραφές.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 5.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4501.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/IMG_4506.JPG" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4250.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 3.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4490.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/IMG_4422.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4495.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Ντύσιμο">
+        <img loading="lazy" src="./photos/keeneye photos/&quot;Ντύσιμο&quot; Οχημάτων/&quot;Ντύσιμο&quot; Οχημάτων 2.JPG"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <div class="port-overlay"><span>Ντύσιμο</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4432.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/Αυτοκόλλητα.JPG" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4429.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4480.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Αυτοκόλλητα">
+        <img loading="lazy" src="./photos/keeneye photos/Αυτοκόλλητα/Αυτοκόλλητα 4.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
+        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4253.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4496.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4474.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4498.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_1370.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4493.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4482.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+      <div class="port-item" data-category="Επιγραφές">
+        <img loading="lazy" src="./photos/keeneye photos/Επιγραφές/IMG_4494.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
+        <div class="port-overlay"><span>Επιγραφές</span></div>
+      </div>
+    </div>
+    <div class="port-load" id="port-load-container" style="gap:16px;">
+      <button id="load-more-btn">Δείτε περισσότερα</button>
+      <button id="load-less-btn" style="display:none">Δείτε λιγότερα</button>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES (desktop only) -->
+  <section class="services" id="services">
+    <div class="sec-label">Τι κάνουμε</div>
+    <div class="sec-title">Υπηρεσίες</div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-n">01</div>
+        <div class="svc-content">
+          <div class="svc-name">Ρούχα Εργασίας</div>
+          <div class="svc-desc">Επαγγελματικός ρουχισμός υψηλής αντοχής με το λογότυπο της επιχείρησής σας.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">02</div>
+        <div class="svc-content">
+          <div class="svc-name">Διαφημιστικά Ρούχα</div>
+          <div class="svc-desc">Ενδύματα προώθησης για εκδηλώσεις, εκθέσεις και διαφημιστικές καμπάνιες.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">03</div>
+        <div class="svc-content">
+          <div class="svc-name">Διαφημιστικά Δώρα</div>
+          <div class="svc-desc">Μεγάλη ποικιλία από Προσωποποιημένα Δώρα για τους πελάτες σας.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">04</div>
+        <div class="svc-content">
+          <div class="svc-name">Σχεδιασμός Μακέτας</div>
+          <div class="svc-desc">Ολοκληρωμένος γραφιστικός σχεδιασμός σύμφωνα με την εταιρεία σας.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">05</div>
+        <div class="svc-content">
+          <div class="svc-name">Έντυπα</div>
+          <div class="svc-desc">Επαγγελματικές κάρτες, φυλλάδια, κατάλογοι.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">06</div>
+        <div class="svc-content">
+          <div class="svc-name">Τύπωμα Οχημάτων</div>
+          <div class="svc-desc">Ολική ή μερική κάλυψη οχημάτων για διαρκή προβολή.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">07</div>
+        <div class="svc-content">
+          <div class="svc-name">Επένδυση Χώρων</div>
+          <div class="svc-desc">Διακόσμηση και σήμανση επαγγελματικών χώρων.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">08</div>
+        <div class="svc-content">
+          <div class="svc-name">Επιγραφές</div>
+          <div class="svc-desc">Φωτεινές, ανάγλυφες, μεταλλικές ή neon.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">09</div>
+        <div class="svc-content">
+          <div class="svc-name">Αυτοκόλλητα</div>
+          <div class="svc-desc">Βινυλίου, κοπτικά ή ψηφιακής εκτύπωσης.</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-n">10</div>
+        <div class="svc-content">
+          <div class="svc-name">Αντηλιακές Μεμβράνες</div>
+          <div class="svc-desc">Προστασία και εξοικονόμηση ενέργειας.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Ας μιλήσουμε<br>για το <em>project σας.</em></h2>
+    <a href="mailto:info@keeneye1.gr" class="c-main-btn" title="Send us an email">Στειλτε μας Email</a>
+
+    <div class="c-info-grid">
+      <div>
+        <div class="c-label">Θεσσαλονίκη</div>
+        <div class="c-val"><a href="tel:+302315318397" title="Call our Thessaloniki office">2315 318 397</a></div>
+        <div class="c-sub">Γαμβέτα 147<br>Τ.Κ. 54248</div>
+      </div>
+      <div>
+        <div class="c-label">Αριδαία</div>
+        <div class="c-val"><a href="tel:+302384021972">2384 021 972</a></div>
+        <div class="c-val"><a href="tel:+306932002129">6932 002 129</a></div>
+        <div class="c-sub">Τσάκοι<br>Τ.Κ. 58400</div>
+      </div>
+      <div class="c-email-item">
+        <div class="c-label">Email</div>
+        <div class="c-val"><a href="mailto:info@keeneye1.gr">info@keeneye1.gr</a></div>
+        <div class="c-sub" style="margin-top:8px">Στείλτε μας το αίτημά σας.</div>
+      </div>
+      <div class="c-copy-minimal">© 2026 Keen Eye Adv. All Rights Reserved.</div>
+    </div>
+  </section>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lb-close">&times;</button>
+    <img src="" id="lb-img" alt="Enlarged project view">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{const e=document.getElementById('mob-menu'),t=document.getElementById('mob-nav'),n=document.querySelectorAll('#mob-nav a'),o=Array.from(document.querySelectorAll('.port-item')),c=document.querySelectorAll('.p-filt'),a=document.getElementById('load-more-btn'),r=document.getElementById('load-less-btn'),l=document.getElementById('port-load-container'),i=document.getElementById('lightbox'),s=document.getElementById('lb-img'),d=document.getElementById('lb-close');let u='all',m=12;const f=()=>{let e=0;o.forEach(t=>{t.classList.remove('visible');const n=t.getAttribute('data-category');('all'===u||u===n)&&(e<m&&t.classList.add('visible'),e++)}),a.style.display=e<=m?'none':'inline-block',r.style.display=m>12?'inline-block':'none',l.style.display=e<=m&&m<=12?'none':'flex'};c.forEach(e=>{e.addEventListener('click',()=>{c.forEach(e=>e.classList.remove('active')),e.classList.add('active'),u=e.getAttribute('data-filter'),m=12,f()})}),a&&a.addEventListener('click',()=>{m+=12,f()}),r&&r.addEventListener('click',()=>{m-=12,m<12&&(m=12),f();const e=document.getElementById('portfolio');e&&e.scrollIntoView({behavior:'smooth',block:'start'})}),f(),o.forEach(e=>{e.addEventListener('click',()=>{const t=e.querySelector('img');s.src=t.src,i.classList.add('active')})}),d.addEventListener('click',()=>i.classList.remove('active')),i.addEventListener('click',e=>{e.target===i&&i.classList.remove('active')}),document.addEventListener('keydown',e=>{'Escape'===e.key&&i.classList.remove('active')}),e.addEventListener('click',()=>{t.classList.toggle('open')}),n.forEach(e=>{e.addEventListener('click',()=>t.classList.remove('open'))})});
+  </script>
+</body>
+
+</html>
