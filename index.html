@@ -84,39 +84,213 @@
   </script>
   <style>
     /* Critical CSS for ATF */
-    * { margin: 0; padding: 0; box-sizing: border-box }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
     :root {
-      --bg: #FDFBF7; --ink: #1A1715; --mid: #5E564F; --rule: #EAE3D9; --acc: #C4622D;
-      --acc-soft: rgba(196, 98, 45, 0.08); --glass: rgba(253, 251, 247, 0.85);
-      --serif: 'Libre Baskerville', Georgia, serif; --sans: 'Manrope', sans-serif;
+      --bg: #FDFBF7;
+      --ink: #1A1715;
+      --mid: #5E564F;
+      --rule: #EAE3D9;
+      --acc: #C4622D;
+      --acc-soft: rgba(196, 98, 45, 0.08);
+      --glass: rgba(253, 251, 247, 0.85);
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'Manrope', sans-serif;
     }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-reveal { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    .delay-1 { animation-delay: 0.2s; } .delay-2 { animation-delay: 0.4s; } .delay-3 { animation-delay: 0.6s; }
-    body { font-family: var(--sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased }
-    nav { padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: rgba(247, 243, 237, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 100; border-bottom: 1px solid var(--rule); }
-    @media(min-width:768px) { nav { padding: 20px 80px; } }
-    .nav-left { display: flex; align-items: center; gap: 48px }
-    .nav-links { display: none; gap: 32px; align-items: center }
-    @media(min-width:768px) { .nav-links { display: flex; } }
-    .nav-links a { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color .15s }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-contact-btn { display: none; align-items: center; gap: 8px; border: 1px solid var(--ink); color: var(--ink); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; padding: 10px 24px; border-radius: 30px; text-decoration: none; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-    @media(min-width:768px) { .nav-contact-btn { display: inline-flex; } }
-    .hero { position: relative; padding: 40px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; background: url('./photos/hero-bg.webp') no-repeat center center; background-size: cover; min-height: calc(100vh - 80px); z-index: 1; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-reveal {
+      opacity: 0;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased
+    }
+
+    nav {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(247, 243, 237, 0.9);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      z-index: 100;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    @media(min-width:768px) {
+      nav {
+        padding: 20px 80px;
+      }
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 48px
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      align-items: center
+    }
+
+    @media(min-width:768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .15s
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav-contact-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media(min-width:768px) {
+      .nav-contact-btn {
+        display: inline-flex;
+      }
+    }
+
+    .hero {
+      position: relative;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background: url('./photos/hero-bg.webp') no-repeat center center;
+      background-size: cover;
+      min-height: calc(100vh - 80px);
+      z-index: 1;
+    }
+
     @media(max-width:767px) {
-      .hero { background: radial-gradient(circle at top left, #FDFBF7 0%, #F7F3ED 100%); padding: 120px 32px 80px; min-height: 85vh; text-align: center; align-items: center; }
-      h1 { font-size: clamp(42px, 12vw, 56px); line-height: 1.0; margin-bottom: 24px; letter-spacing: -0.04em; }
+      .hero {
+        background: radial-gradient(circle at top left, #FDFBF7 0%, #F7F3ED 100%);
+        padding: 120px 32px 80px;
+        min-height: 85vh;
+        text-align: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: clamp(42px, 12vw, 56px);
+        line-height: 1.0;
+        margin-bottom: 24px;
+        letter-spacing: -0.04em;
+      }
     }
-    h1 { font-family: var(--serif); font-size: clamp(40px, 8vw, 84px); font-weight: 400; line-height: 1.05; letter-spacing: -.03em; margin-bottom: 24px }
-    h1 em { font-style: italic; display: block; color: var(--mid); font-weight: 400; }
-    .h-tag { font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--acc); margin-bottom: 24px; font-weight: 500 }
-    @media(min-width:768px) { .h-tag { font-size: 11px; margin-bottom: 32px } }
-    .h-body { font-size: 15px; line-height: 1.8; color: var(--mid); max-width: 420px; margin-top: 28px; font-weight: 300 }
-    @media(min-width:768px) { .h-body { font-size: 16px } }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 8vw, 84px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin-bottom: 24px
+    }
+
+    h1 em {
+      font-style: italic;
+      display: block;
+      color: var(--mid);
+      font-weight: 400;
+    }
+
+    .h-tag {
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--acc);
+      margin-bottom: 24px;
+      font-weight: 500
+    }
+
+    @media(min-width:768px) {
+      .h-tag {
+        font-size: 11px;
+        margin-bottom: 32px
+      }
+    }
+
+    .h-body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--mid);
+      max-width: 420px;
+      margin-top: 28px;
+      font-weight: 300
+    }
+
+    @media(min-width:768px) {
+      .h-body {
+        font-size: 16px
+      }
+    }
   </style>
   <link rel="preload" href="./style.min.css?v=1.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./style.min.css?v=1.6"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="./style.min.css?v=1.6">
+  </noscript>
 </head>
 
 <body class="js-loading">
@@ -181,7 +355,8 @@
     <div class="h-left">
       <div class="h-tag hero-reveal">Αισθητική & Διαφήμιση, 1995</div>
       <h1 class="hero-reveal delay-1">Κορυφαία<br>Διαφημιστική<br><em>Προβολή.</em></h1>
-      <p class="h-body hero-reveal delay-2">Ολοκληρωμένη διαφημιστική φροντίδα και ψηφιακές εκτυπώσεις από το 1995. Εξειδικευμένες λύσεις σε
+      <p class="h-body hero-reveal delay-2">Ολοκληρωμένη διαφημιστική φροντίδα και ψηφιακές εκτυπώσεις από το 1995.
+        Εξειδικευμένες λύσεις σε
         επιγραφές, branding και "ντύσιμο" επαγγελματικών χώρων.</p>
       <div class="h-actions hero-reveal delay-3">
         <a href="#portfolio" class="h-btn">Δείτε τα έργα μας</a>
@@ -247,7 +422,8 @@
         <div class="port-overlay"><span>Επιγραφές</span></div>
       </div>
       <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-4.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-4.jpg"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
         <div class="port-overlay"><span>Ντύσιμο</span></div>
       </div>
       <div class="port-item" data-category="Αυτοκόλλητα">
@@ -267,7 +443,8 @@
         <div class="port-overlay"><span>Επιγραφές</span></div>
       </div>
       <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-7.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-7.jpg"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
         <div class="port-overlay"><span>Ντύσιμο</span></div>
       </div>
       <div class="port-item" data-category="Επιγραφές">
@@ -279,7 +456,8 @@
         <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
       </div>
       <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-6.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-6.jpg"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
         <div class="port-overlay"><span>Ντύσιμο</span></div>
       </div>
       <div class="port-item" data-category="Επιγραφές">
@@ -296,7 +474,8 @@
         <div class="port-overlay"><span>Επιγραφές</span></div>
       </div>
       <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-5.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-5.jpg"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
         <div class="port-overlay"><span>Ντύσιμο</span></div>
       </div>
       <div class="port-item" data-category="Επιγραφές">
@@ -312,7 +491,8 @@
         <div class="port-overlay"><span>Επιγραφές</span></div>
       </div>
       <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-3.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
+        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-3.jpg"
+          alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
         <div class="port-overlay"><span>Ντύσιμο</span></div>
       </div>
     </div>
@@ -405,7 +585,8 @@
   <!-- CONTACT -->
   <section class="contact reveal" id="contact">
     <h2>Ας μιλήσουμε<br>για το <em>project σας.</em></h2>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@keeneye1.gr" target="_blank" class="c-main-btn" title="Στείλτε μας Email">ΣΤΕΙΛΤΕ ΜΑΣ EMAIL</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@keeneye1.gr" target="_blank" class="c-main-btn"
+      title="Στείλτε μας Email">ΣΤΕΙΛΤΕ ΜΑΣ EMAIL</a>
 
     <div class="c-info-grid">
       <div>
@@ -484,7 +665,7 @@
         const loadMoreBtn = document.getElementById('load-more-btn');
         const loadLessBtn = document.getElementById('load-less-btn');
         const container = document.getElementById('port-load-container');
-        
+
         let currentFilter = 'all';
         let itemsLimit = 12;
 
@@ -508,8 +689,8 @@
           });
 
           // Toggle buttons based on visibility
-          const totalAvailable = currentFilter === 'all' 
-            ? items.length 
+          const totalAvailable = currentFilter === 'all'
+            ? items.length
             : items.filter(i => i.getAttribute('data-category') === currentFilter).length;
 
           if (isMobile) {
