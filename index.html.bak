@@ -82,7 +82,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="./style.css?v=1.5">
+  <link rel="stylesheet" href="./style.min.css">
 </head>
 
 <body class="js-loading">
@@ -101,6 +101,7 @@
       <div class="nav-links">
         <a href="#hero">Αρχική</a>
         <a href="#portfolio">Έργα</a>
+        <a href="#services">Υπηρεσίες</a>
       </div>
     </div>
     <a href="#contact" class="nav-contact-btn">Επικοινωνία</a>
@@ -108,13 +109,12 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-
-  <!-- MOBILE NAV (Preserved Design) -->
   <div class="mob-nav" id="mob-nav">
     <div class="mob-nav-inner">
       <div class="mob-nav-links">
         <a href="#hero">Αρχική</a>
         <a href="#portfolio">Έργα</a>
+        <a href="#services">Υπηρεσίες</a>
         <a href="#contact">Επικοινωνία</a>
       </div>
 
@@ -147,7 +147,8 @@
     <div class="h-left">
       <div class="h-tag hero-reveal">Αισθητική & Διαφήμιση, 1995</div>
       <h1 class="hero-reveal delay-1">Κορυφαία<br>Διαφημιστική<br><em>Προβολή.</em></h1>
-      <p class="h-body hero-reveal delay-2">Ολοκληρωμένη διαφημιστική φροντίδα και ψηφιακές εκτυπώσεις από το 1995. Εξειδικευμένες λύσεις σε
+      <p class="h-body hero-reveal delay-2">Ολοκληρωμένη διαφημιστική φροντίδα και ψηφιακές εκτυπώσεις από το 1995.
+        Εξειδικευμένες λύσεις σε
         επιγραφές, branding και "ντύσιμο" επαγγελματικών χώρων.</p>
       <div class="h-actions hero-reveal delay-3">
         <a href="#portfolio" class="h-btn">Δείτε τα έργα μας</a>
@@ -164,6 +165,8 @@
     </div>
   </section>
 
+
+  <div class="divider"></div>
 
   <!-- ABOUT -->
   <section class="about reveal" id="about">
@@ -192,106 +195,23 @@
         </div>
       </div>
     </div>
+
   </section>
 
   <div class="divider"></div>
 
   <!-- PORTFOLIO -->
-  <section class="portfolio reveal" id="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="sec-label">Δουλειές Μας</div>
     <div class="sec-title">Πρόσφατα Έργα</div>
-    <div class="port-filters">
-      <button class="p-filt active" data-filter="all">Όλα</button>
-      <button class="p-filt" data-filter="Επιγραφές">Επιγραφές</button>
-      <button class="p-filt" data-filter="Αυτοκόλλητα">Αυτοκόλλητα & Banner</button>
-      <button class="p-filt" data-filter="Ντύσιμο">Ντύσιμο Οχημάτων</button>
-    </div>
     <div class="port-grid" id="port-grid">
-      <!-- Signs -->
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4484.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-4.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
-        <div class="port-overlay"><span>Ντύσιμο</span></div>
-      </div>
-      <div class="port-item" data-category="Αυτοκόλλητα">
-        <img loading="lazy" src="photos/projects/stickers/banner.jpg" alt="Επαγγελματικό διαφημιστικό banner">
-        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4486.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Αυτοκόλλητα">
-        <img loading="lazy" src="photos/projects/stickers/sticker-main.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
-        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4503.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-7.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
-        <div class="port-overlay"><span>Ντύσιμο</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4481.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Αυτοκόλλητα">
-        <img loading="lazy" src="photos/projects/stickers/IMG_4489.JPG" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
-        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
-      </div>
-      <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-6.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
-        <div class="port-overlay"><span>Ντύσιμο</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4500.JPG" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Αυτοκόλλητα">
-        <img loading="lazy" src="photos/projects/stickers/IMG_4416.jpg" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
-        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
-      </div>
-      <!-- More... -->
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/Επιγραφές.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-5.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
-        <div class="port-overlay"><span>Ντύσιμο</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4501.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Αυτοκόλλητα">
-        <img loading="lazy" src="photos/projects/stickers/IMG_4506.JPG" alt="Εκτύπωση και εφαρμογή αυτοκόλλητων">
-        <div class="port-overlay"><span>Αυτοκόλλητα</span></div>
-      </div>
-      <div class="port-item" data-category="Επιγραφές">
-        <img loading="lazy" src="photos/projects/signs/IMG_4250.jpg" alt="Επαγγελματική εξωτερική επιγραφή">
-        <div class="port-overlay"><span>Επιγραφές</span></div>
-      </div>
-      <div class="port-item" data-category="Ντύσιμο">
-        <img loading="lazy" src="photos/projects/vehicle-wrapping/vehicle-3.jpg" alt="Ντύσιμο οχήματος με εταιρικά γραφικά">
-        <div class="port-overlay"><span>Ντύσιμο</span></div>
-      </div>
-    </div>
-    <div class="port-load" id="port-load-container" style="gap:16px;">
-      <button id="load-more-btn">Δείτε περισσότερα</button>
-      <button id="load-less-btn" style="display:none">Δείτε λιγότερα</button>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- SERVICES (desktop only) -->
-  <section class="services reveal" id="services">
+  <!-- SERVICES -->
+  <section class="services" id="services" style="padding: 100px 5vw;">
     <div class="sec-label">Τι κάνουμε</div>
     <div class="sec-title">Υπηρεσίες</div>
     <div class="svc-grid">
@@ -369,37 +289,36 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact reveal" id="contact">
-    <h2>Ας μιλήσουμε<br>για το <em>project σας.</em></h2>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@keeneye1.gr" target="_blank" class="c-main-btn" title="Στείλτε μας Email">ΣΤΕΙΛΤΕ ΜΑΣ EMAIL</a>
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <h2>Ας μιλήσουμε<br>για το <em>project σας.</em></h2>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@keeneye1.gr" target="_blank" class="c-main-btn">ΣΤΕΙΛΤΕ ΜΑΣ EMAIL</a>
 
-    <div class="c-info-grid">
-      <div>
-        <div class="c-label">Θεσσαλονίκη</div>
-        <div class="c-val"><a href="tel:+302315318397" title="Καλέστε μας στη Θεσσαλονίκη">2315 318 397</a></div>
-        <div class="c-sub">Γαμβέτα 147<br>Τ.Κ. 54248</div>
-      </div>
-      <div>
-        <div class="c-label">Αριδαία</div>
-        <div class="c-val"><a href="tel:+302384021972">2384 021 972</a></div>
-        <div class="c-val"><a href="tel:+306932002129">6932 002 129</a></div>
-        <div class="c-sub">Τσάκοι<br>Τ.Κ. 58400</div>
-      </div>
-      <div class="c-email-item">
-        <div class="c-label">Email</div>
-        <div class="c-val"><a href="mailto:info@keeneye1.gr">info@keeneye1.gr</a></div>
-        <div class="c-sub" style="margin-top:8px">Στείλτε μας το αίτημά σας.</div>
+      <div class="c-info-grid">
+        <div class="c-item">
+          <div class="c-label">Θεσσαλονίκη</div>
+          <div class="c-val"><a href="tel:+302315318397">2315 318 397</a></div>
+          <div class="c-sub">Γαμβέτα 147<br>Τ.Κ. 54248</div>
+        </div>
+        <div class="c-item">
+          <div class="c-label">Αριδαία</div>
+          <div class="c-val">
+            <a href="tel:+302384021972">2384 021 972</a><br>
+            <a href="tel:+306932002129">6932 002 129</a>
+          </div>
+          <div class="c-sub">Τσάκοι<br>Τ.Κ. 58400</div>
+        </div>
+        <div class="c-item c-email-row">
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:info@keeneye1.gr">info@keeneye1.gr</a></div>
+          <div class="c-sub">Στείλτε μας το αίτημά σας.</div>
+        </div>
       </div>
     </div>
-    <div class="c-copy-minimal">© 2026 KEEN EYE ADV. ALL RIGHTS RESERVED.</div>
+    <div class="c-copy">© 2026 KEEN EYE ADV. ALL RIGHTS RESERVED.</div>
   </section>
 
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <button class="lb-close" id="lb-close">&times;</button>
-    <img src="" id="lb-img" alt="Enlarged project view">
-  </div>
 
   <script>
     /**
@@ -442,113 +361,6 @@
         }
       });
 
-      // TASK 2: Portfolio Logic (Desktop & Mobile)
-      runTask(() => {
-        const grid = document.getElementById('port-grid');
-        const items = Array.from(document.querySelectorAll('.port-item'));
-        const filters = document.querySelectorAll('.p-filt');
-        const loadMoreBtn = document.getElementById('load-more-btn');
-        const loadLessBtn = document.getElementById('load-less-btn');
-        const container = document.getElementById('port-load-container');
-        
-        let currentFilter = 'all';
-        let itemsLimit = 12;
-
-        const updateGrid = () => {
-          let visibleCount = 0;
-          const isMobile = window.innerWidth < 768;
-          const currentLimit = isMobile ? 6 : itemsLimit;
-
-          items.forEach(item => {
-            const cat = item.getAttribute('data-category');
-            if (currentFilter === 'all' || cat === currentFilter) {
-              if (visibleCount < currentLimit) {
-                item.classList.add('visible');
-              } else {
-                item.classList.remove('visible');
-              }
-              visibleCount++;
-            } else {
-              item.classList.remove('visible');
-            }
-          });
-
-          // Toggle buttons based on visibility
-          const totalAvailable = currentFilter === 'all' 
-            ? items.length 
-            : items.filter(i => i.getAttribute('data-category') === currentFilter).length;
-
-          if (isMobile) {
-            loadMoreBtn.style.display = 'none';
-            loadLessBtn.style.display = 'none';
-            container.style.display = 'none';
-          } else {
-            loadMoreBtn.style.display = totalAvailable > itemsLimit ? 'inline-block' : 'none';
-            loadLessBtn.style.display = itemsLimit > 12 ? 'inline-block' : 'none';
-            container.style.display = (totalAvailable <= itemsLimit && itemsLimit <= 12) ? 'none' : 'flex';
-          }
-        };
-
-        filters.forEach(btn => {
-          btn.addEventListener('click', () => {
-            filters.forEach(f => f.classList.remove('active'));
-            btn.classList.add('active');
-            currentFilter = btn.getAttribute('data-filter');
-            itemsLimit = 12;
-            updateGrid();
-          });
-        });
-
-        loadMoreBtn.addEventListener('click', () => {
-          itemsLimit += 12;
-          updateGrid();
-        });
-
-        loadLessBtn.addEventListener('click', () => {
-          itemsLimit = 12;
-          updateGrid();
-          document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-
-        updateGrid();
-      });
-
-      // TASK 3: Lightbox Logic
-      runTask(() => {
-        const lightbox = document.getElementById('lightbox');
-        const lbImg = document.getElementById('lb-img');
-        const lbClose = document.getElementById('lb-close');
-        const grid = document.getElementById('port-grid');
-
-        grid.addEventListener('click', (e) => {
-          const item = e.target.closest('.port-item');
-          if (item) {
-            const src = item.querySelector('img').src;
-            lbImg.src = src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-          }
-        });
-
-        lbClose.addEventListener('click', () => {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-
-        lightbox.addEventListener('click', (e) => {
-          if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-          }
-        });
-
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-          }
-        });
-      });
 
       // TASK 4: Scroll Reveal Observer
       const revealObserver = new IntersectionObserver((entries) => {
