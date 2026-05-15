@@ -720,7 +720,7 @@ h1 em {
 
 /* --- CONTACT SECTION (Updated Aesthetics) --- */
 .contact {
-  padding: 80px 40px;
+  padding: 80px 40px 0;
   background: var(--ink);
   color: #F7F3ED;
   text-align: center;
@@ -728,9 +728,16 @@ h1 em {
   flex-direction: column;
   align-items: center;
   position: relative;
+  /* center content vertically within the contact block */
+  justify-content: center;
+  /* make the contact block at least one viewport tall */
+  min-height: 100vh;
+  max-height: none;
+  overflow: visible;
+  padding-bottom: 0;
 }
 
-@media(min-width:768px) { .contact { padding: 100px 80px; } }
+@media(min-width:768px) { .contact { padding: 100px 80px 0; min-height: 100vh; } }
 
 .contact h2 {
   font-family: var(--serif);
@@ -768,24 +775,42 @@ h1 em {
 .c-info-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 60px;
+  gap: 32px;
   max-width: 800px;
   margin: 0 auto;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 55px;
+  padding-bottom: 0px;
+}
+
+.c-info-grid > div {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 @media(min-width:640px) {
   .c-info-grid { grid-template-columns: 1fr 1fr; }
-  .c-email-item { grid-column: span 2; text-align: center; margin-top: -10px; }
+  .c-email-item { grid-column: span 2; text-align: center; margin-top: 60px; display:flex; flex-direction:column; align-items:center; }
 }
+
+@media(min-width:960px) {
+  .c-info-grid { grid-template-columns: repeat(3, 1fr); max-width: 1200px; gap: 32px; }
+  .c-email-item { grid-column: 1 / -1; margin-top: 80px; padding: 40px 24px !important; }
+}
+
+/* Ensure email block is centered on all widths */
+.c-email-item { text-align: center; }
 
 .c-label {
   font-size: 11px;
   letter-spacing: .2em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .c-val {
@@ -793,7 +818,8 @@ h1 em {
   font-size: 22px;
   font-weight: 400;
   color: #F7F3ED;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  line-height: 1.6;
 }
 
 .c-val a { color: #F7F3ED; text-decoration: none; transition: all .3s ease; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
@@ -802,13 +828,17 @@ h1 em {
 .c-sub {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
-  margin-top: 16px;
+  margin-top: 20px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .c-copy {
-  margin-top: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
   font-size: 12px;
   color: rgba(247,243,237,0.6);
   letter-spacing: .06em;
